@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { Result } from '../Types';
 import './Search.css'
 
@@ -20,7 +18,7 @@ export default function ResultItem(props: ResultProps) {
     if (!props.isSearchResult) {
         index = <h2 className="listNum">{props.index}</h2>
         movers = <div className="movers">
-                <button onClick={() => props.raise(props.index - 1)}><FontAwesomeIcon icon={solid('coffee')} /></button>
+                <button onClick={() => props.raise(props.index - 1)}>^</button>
                 <button onClick={() => props.lower(props.index - 1)}>V</button>
         </div>;
         addRmvText = "Remove";
